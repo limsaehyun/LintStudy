@@ -1,7 +1,7 @@
 package com.comit.checker.detector
 
 import com.android.tools.lint.detector.api.*
-import com.comit.checker.issue.ProhibitSetContentView
+import com.comit.checker.issue.ProhibitSetContentIssue
 import com.intellij.psi.PsiMethod
 import org.jetbrains.uast.UCallExpression
 
@@ -12,7 +12,7 @@ private const val SET_CONTENT_VIEW_METHOD = "setContentView"
 class ProhibitSetContentViewDetector: Detector(), SourceCodeScanner {
 
     companion object {
-        val ISSUE = ProhibitSetContentView.toLintIssue(
+        val ISSUE = ProhibitSetContentIssue.toLintIssue(
             ProhibitSetContentViewDetector::class.java,
             "Prohibit setContentView(), use DataBindingUtil.setContentView() instead",
         )
