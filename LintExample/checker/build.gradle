@@ -5,8 +5,9 @@ dependencies {
     compileOnly "com.android.tools.lint:lint-api:$versions.lint"
     compileOnly "com.android.tools.lint:lint-checks:$versions.lint"
 
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "com.android.tools.lint:lint:$versions.lint"
     testImplementation "com.android.tools.lint:lint-tests:$versions.lint"
-    testImplementation "junit:junit:4.12"
     testImplementation "org.assertj:assertj-core:3.9.0"
 }
 
